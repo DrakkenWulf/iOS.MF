@@ -303,12 +303,6 @@ function template_control_quick_reply() {
 //Generate a paging control
 function template_control_paging($pageIndex = null) {
   global $context, $txt;
-  echo $context['page_index'];
-}
-
-//Generate a paging control
-function template_control_pagingXXX($pageIndex = null) {
-  global $context, $txt;
   
   //If we've passed in a page index we probably don't have the usual context information available to us. We will have to work out some information from it
   if ($pageIndex) {
@@ -334,12 +328,9 @@ function template_control_pagingXXX($pageIndex = null) {
       });
     </script>';
 
-//    <button id="page-count">', $txt['iPage'], ' ', $context['page_info']['current_page'], ' ', $txt['iOf'], ' ', ($context['page_info']['num_pages'] == 0) ? '1' : $context['page_info']['num_pages'], '</button>
-
-//Output our paging control
+  //Output our paging control
   echo '
     <div id="page-buttons" class="page buttons">
-    "',$pageIndex,'"
       <button id="previous-page" class="previous-page button" ', $context['page_info']['current_page'] == 1 ? 'disabled="disabled"' : '', '>', $txt['iPrev'], '</button>
       <button id="page-count">', $txt['iPage'], ' ', $context['page_info']['current_page'], ' ', $txt['iOf'], ' ', ($context['page_info']['num_pages'] == 0) ? '1' : $context['page_info']['num_pages'], '</button>
       <button id="next-page" class="next-page button" ', ($context['page_info']['current_page'] == $context['page_info']['num_pages'] || $context['page_info']['num_pages'] == 0) ? 'disabled="disabled"' : '', '>', $txt['iNext'], '</button>
