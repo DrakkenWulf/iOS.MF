@@ -11,7 +11,7 @@ require_once ($settings['theme_dir'] . '/ThemeControls.php');
 require_once ($settings['theme_dir'] . '/ThemeFunctions.php');
 
 //Recent posts
-function template_main() {
+function template_recent() {
   global $context, $settings, $options, $txt, $scripturl, $modSettings;
   
   //Change list item class when child element is clicked

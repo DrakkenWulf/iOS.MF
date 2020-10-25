@@ -13,7 +13,7 @@ require_once ($settings['theme_dir'] . '/ThemeFunctions.php');
 function template_init() {
   global $context, $settings, $options, $txt;
   
-  $settings['theme_version'] = '1.0';
+  $settings['theme_version'] = '1.1';
   $settings['require_theme_strings'] = true;
   
   //Disable SimplePortal
